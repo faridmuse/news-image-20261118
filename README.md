@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261118/faridmuse/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/faridmuse/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-One image summing up the world's news of Wednesday 18 November 2026: Iranian drones target a US radar in Bahrain, Nvidia beats forecasts with $115.8bn of revenue, the UK sanctions eight Israeli settlement firms, Canada and China cut tariffs in Shenzhen, Russian jets enter Japan's airspace, and Cyclone Akvan bears down on India. The image is drawn programmatically with PIL (crisp text, no AI generation) from reporting published on 18 November 2026 by Al Jazeera, Reuters, CNBC, the BBC, the Japan Times and the IMD.
+One image summing up the world's news of Wednesday 18 November 2026: thirty-five stories from one day — Cyclone Akvan bears down on India, Russian jets enter Japan's airspace, Nvidia beats forecasts with $115.8bn of revenue, the UK sanctions eight Israeli settlement firms, Canada and China cut tariffs in Shenzhen, and thirty more headlines across six continents. The image is drawn programmatically with PIL (crisp text, no AI generation) from reporting published on 18 November 2026 by Reuters, the AP, BBC, CNN, Al Jazeera, The Hindu, the IMD and others; every story carries its date, place and source.
 
 ## Run it
 
