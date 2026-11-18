@@ -1,16 +1,24 @@
-// A news-image-daily entry (Node 22, standard library only): the image is the
-// entry.png beside this file, drawn programmatically with PIL from the verified
-// news of Wednesday 18 November 2026, and the program copies it to
-// /output/entry.png. The image is a newspaper front page: masthead naming the
-// day, a world map with the top 10 stories marked, 35 numbered headlines
-// (topics 1-10 with summaries, 11-35 headline-only), exactly 3 photos, and
-// every story carrying its date, place and source. It is 1024x1024 and
-// 370920 bytes, inside the gate limits.
+// Hand-written entrypoint for the 18 November 2026 front page.
 //
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// What this does, in plain terms: it takes the finished newspaper image
+// that lives next to this file (entry.png) and drops an exact copy of it
+// into the output folder, creating that folder first if it is missing.
+// The folder comes from MAKEFUN_OUTPUT_DIR when that variable is set,
+// and falls back to /output otherwise.
+//
+// About the picture itself: it is the completed front page dated
+// Wednesday 18 November 2026 — a square 1024-by-1024 image, 370920 bytes
+// on disk, carrying thirty-five numbered news stories alongside a world
+// map and three photographs. This program does not redraw or alter any
+// of that; it only moves the finished file into place, the same way
+// every time, with no network access and no other files written.
 
-import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { copyFileSync, mkdirSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-copyFileSync(new URL('./entry.png', import.meta.url), join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.png'));
+const folderHere = dirname(fileURLToPath(import.meta.url));
+const outputFolder = process.env.MAKEFUN_OUTPUT_DIR || "/output";
+
+mkdirSync(outputFolder, { recursive: true });
+copyFileSync(join(folderHere, "entry.png"), join(outputFolder, "entry.png"));
